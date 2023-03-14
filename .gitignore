@@ -7,6 +7,9 @@
 # Unignore all dirs
 !*/
 
+# All the video / image sequence
+dataset
+
 CMakeLists.txt.user
 CMakeLists_modified.txt
 
