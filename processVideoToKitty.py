@@ -7,7 +7,7 @@ import numpy as np
 cap = cv2.VideoCapture("/home/ibois/Downloads/long_beam_record.mov")
 fps = 30
 
-exportPath = "./ExportedFrames/"
+exportPath = "./dataset/ExportedFrames/01"
 # create a folder to store the frames
 if not os.path.exists(exportPath):
     os.makedirs(exportPath)
@@ -36,6 +36,6 @@ while(cap.isOpened()):
 
 intervalBetweenFrames = int(1000000000 / fps)
 startTime = time.time() * 1e9
-with open(os.path.join(exportPath, 'time.txt'), 'w') as file:
+with open(os.path.join(exportPath, 'times.txt'), 'w') as file:
     for i in range(frameCounter):
         file.write(format(startTime + intervalBetweenFrames * i, '.0f') + "\n")
